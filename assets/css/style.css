@@ -1,0 +1,599 @@
+/*
+Theme Name: Flusk
+Theme URI: http://themewagon.com/demo/Flusk/
+Author: ThemeWagon
+Author URI: http://themewagon.com/
+Description: Slick One page HTML 5 template powered by Bootstrap 3.
+Version: 1.14.11
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+Tags: blur, white, one page, parallax, responsive-layout, full-width-template
+Text Domain: flusk
+*/
+
+/**
+* Table of Contents:
+*
+* 01.0 - Global
+* 02.0 - Header
+* 03.0 - Drawer with menu
+* 04.0 - Parallax styles
+* 05.0 - Recent works
+* 06.0 - Services
+* 07.0 - Blog
+* 08.0 - Testimonials
+* 09.0 - Contact
+* 10.0 - Footer
+* 11.0 - Responsive styles
+* -----------------------------------------------------------------------------
+*/
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  01 - Global 
+/////////////////////////////////////////////////////////////////////*/
+
+* {outline: none !important;}
+
+/* highlight selection color styles*/
+::selection {
+	background-color: #c86679a1;
+	color: #fff;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	overflow-y: scroll;
+}
+
+/* not sure if this is used or does anything */
+body {
+	color: whitesmoke;	
+	background: #09071d;
+}
+
+p {margin: 0 0 20px 0;	}
+
+img {max-width: 100%;}
+
+/* link styles */
+a{	
+	color: #c9a072;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+	text-decoration: none;
+	outline: none;
+}
+
+/* link styles on hover */
+a:hover {
+	color: #17aaaa;	
+}
+
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6{		
+	margin: 0 0 15px 0;	
+	text-align: center;
+	color: whitesmoke;
+	text-transform: uppercase;
+	font-family: 'Alegreya Sans';
+}
+
+/* paragraph style */
+p {
+	color: white;
+	font-size: 18px;
+}
+
+.row {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.row-bottom {
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.btn {
+	border-radius: 0;
+	text-align: center;
+}
+
+/* Not sure if this does anything */
+.btn-o {
+    border: 1px solid #5C6B70;
+    color: #5C6B70;
+}
+
+/* Not sure if this does anything */
+.btn-o:hover {
+    background: #5C6B70;
+    color: white;
+}
+
+/* button text color when hovering over image */
+.btn.btn-o-white {
+	background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+	width: auto;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    border: 2px solid white;
+    background-size: 300% 100%;
+
+	border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+/* button text on hover */
+.btn.btn-o-white:hover {
+	background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+	background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.btn.btn-contact {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+	color: white;
+	background: transparent;
+
+	border-radius: 5px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn.btn-contact:hover {
+    color: #09071d;
+	font-weight: bold;
+	border: none;
+	background-image: linear-gradient(to right, #009245, #FCEE21);
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+/*////////////////////////////////////////////////////////////////////////
+//  02 - Header
+///////////////////////////////////////////////////////////////////////*/
+
+#header {	
+	position: relative;
+	padding: 0 !important;
+}
+
+#header.header-wrapper {
+	background: url(../images/heading_bg_v2.jpg) no-repeat center center;
+	background-size: cover;
+	display: table;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	overflow-x: hidden;
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    #header.header-wrapper {
+		height: auto;
+		min-height: 100vh;
+		padding: 0px; 
+	} 
+}
+
+#header.header-wrapper .header-wrapper-inner {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; 
+}
+
+#header .top {
+	position:fixed;
+	top:0;
+	width: 100%;
+	padding: 30px;
+	height: auto;
+	z-index: 500;
+	-o-transition: all .5s;
+	-ms-transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;	
+	transition: all .5s;		
+}
+
+/* scrolling header color and styles */
+#header .top.solid {
+    background: #09071d;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#header .top h1{
+	margin-bottom: 0;
+}
+#header .top.solid .toggleDrawer i {
+    padding-top: 8px;
+}
+
+/* Logo Text Styles */
+#header .logo, #header .toggleDrawer{
+	font-family: "League Spartan";
+	color: white;
+	text-decoration: none;
+}
+
+/* Slogan Text Styles */
+#header .slogan{
+	font-size: 4em;
+	margin-bottom: 20px;
+	line-height: .5em;
+	font-weight: bolder;
+	font-family: "League Spartan";
+	text-transform: capitalize;
+	color: white;
+}
+
+/* Secondary Slogan Text Styles */
+#header .secondary-slogan{
+	font-size: 2.5em;
+	color: white;
+	line-height: 1.0em;
+	font-family: 'Alegreya SC';
+}
+
+#header .bottom {
+    bottom: 10%;
+	display: block;
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+}
+#header .bottom a img {
+    width: 50px;
+}
+#header .bottom a {
+    opacity: 0.7;
+}
+#header .bottom a:hover {
+    opacity: 1;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  03 - Drawer with menu
+///////////////////////////////////////////////////////////////////////*/
+
+#drawer-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-right: -300px;
+    background: #272727;
+    width: 300px;
+    padding: 20px;
+    z-index: 999;
+}
+
+/* hamburger menu Heading Text Styles */
+#drawer-right h1, #drawer-right h2{color: white;}
+
+#drawer-right .nav-pills>li>a {
+	font-size: 18px;
+	border-radius: 0;
+}
+
+#drawer-right .social{margin-top: 30px}
+#drawer-right .social ul {
+    list-style: none;
+    padding-left: 20px;
+}
+#drawer-right .social ul > li {
+    display: inline-block;
+}
+/* hamburger menu social media icons styles on hover */
+#drawer-right .social ul > li > a:hover{
+	color: #17aaaa;
+}
+
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  04 - Parallax styles
+///////////////////////////////////////////////////////////////////////*/
+
+.content-block{
+	background:transparent no-repeat center center fixed;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+	background-size:100%;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	overflow:hidden;
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+.parallax{
+	padding: 80px 0;
+}
+
+.block-body {
+	margin-top: 60px;
+}
+
+/* education section background styles */
+#education {
+	background-image: url(../images/education_bg.jpg);
+}
+
+/* parallax section background styles */
+#parallax {
+	background-image: url(../images/education_bg.jpg);
+	background-color: #312f45;
+}
+/* contact section background styles */
+#contact {
+	background-image: url(../images/contact_bg.jpg);
+	/* overlay color */
+	background-color: #312f45;
+}
+#parallax h1{
+	margin-bottom: 60px;
+}
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  05 - Recent works - Portfolio
+///////////////////////////////////////////////////////////////////////*/
+
+/* portfolio background styles */
+#portfolio
+{
+	background-color: #272727;
+	/* padding-bottom: 27%; */
+}
+
+.col-sm-4 {
+	margin-bottom: 30px;
+}
+
+.recent-work {
+    width: 100%;
+    padding-bottom: 30%;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.recent-work span{
+	margin-top: 20px;
+	opacity: 0;
+	position: relative;
+	z-index: 1;
+}
+/* Portfolio images on hover styles settings */
+.recent-work:before {
+    background: #09071da5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    opacity: 0;
+    -o-transition: all .2s;
+	-ms-transition: all .2s;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+.recent-work:hover {
+    background-size: 150%;
+    background-position: center;
+}
+.recent-work:hover:before, .recent-work:hover span {
+    opacity: 1;
+}
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  06 - Services - Education
+///////////////////////////////////////////////////////////////////////*/
+
+/* Education text & font styles */
+#services h1, #services h2 {
+	color: whitesmoke;
+	font-family: 'Alegreya Sans';
+}
+#services p {
+	color: whitesmoke;
+	font-family: 'Alegreya Sans';
+	font-size: 20px;
+	font-weight: bold;
+}
+.service i {
+    font-size: 60px;
+}
+.service {
+    padding: 0 25px;
+}
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  07 - CONNECT
+///////////////////////////////////////////////////////////////////////*/
+
+/* UNUSED */
+#connect .blog-post img {
+    margin-bottom: 20px;
+}
+#connect .date {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  08 - Testimonials
+///////////////////////////////////////////////////////////////////////*/
+
+
+#testimonials{
+	text-align: center;
+}
+#testimonials .testimonial > img {
+    border-radius: 100%;
+    margin-bottom: 15px;
+}
+#testimonials .testimonial {
+	padding: 25px;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  09 - Contact
+///////////////////////////////////////////////////////////////////////*/
+
+
+#contact {
+	color: white;
+}
+#contact h1 {
+	color: white;
+	font-family: 'Alegreya Sans';
+}
+
+.form-control-white {
+	font-size: 16px;
+	background: #272727a4;
+    color: white;
+}
+
+.form-control-white::-webkit-input-placeholder { /* WebKit browsers */
+	font-size: 16px;
+	color:    white;
+}
+.form-control-white:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-size: 16px;
+	color:    white;
+    opacity:  1;
+}
+.form-control-white::-moz-placeholder { /* Mozilla Firefox 19+ */
+	font-size: 16px;
+	color:    white;
+    opacity:  1;
+}
+.form-control-white:-ms-input-placeholder { /* Internet Explorer 10+ */
+	font-size: 16px;
+	color:    white;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  10 - Footer
+///////////////////////////////////////////////////////////////////////*/
+
+
+#footer {
+	background: #09071d;
+	/* footer text color */
+	color: whitesmoke;
+	}
+
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  11 - Responsive styles
+///////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 767px){
+	#header .slogan {
+		font-size: 2.8em; 
+	} 
+
+	#header .secondary-slogan {
+		font-size: 1.2em;
+	}
+
+	#header .bottom {
+		bottom: 13%;
+	}
+
+	.blog-post {
+		margin-bottom: 40px;
+	}
+
+	.recent-work {
+		background-position: center;
+	}
+
+	.recent-work:before {
+		opacity: 1;
+	}
+
+	.recent-work span {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 480px) {
+	#drawer-right {
+		padding: 10px 20px;
+	}
+
+	#drawer-right .nav-pills>li>a {
+		font-size: 17px;
+	}
+
+	.nav-stacked>li+li {
+		margin-top: 0;
+	}
+
+	.nav>li>a {
+		padding: 8px 15px;
+	}
+
+	#drawer-right .social {
+		margin-top: 5px;
+	}
+
+	#header {
+		background-size: cover;
+	}
+}
