@@ -72,12 +72,12 @@
 			if($wrapper.css('marginLeft')=='0px'){
 				$drawerRight.animate({marginRight : 0},500);
 				$wrapper.animate({marginLeft : -300},500);
-				$logo.animate({marginLeft : 300},500);
+				$logo.animate({marginLeft : 300},150);
 			}
 			else{
 				$drawerRight.animate({marginRight : -300},500);
 				$wrapper.animate({marginLeft : 0},500);
-				$logo.animate({marginLeft : 0},500);
+				$logo.animate({marginLeft : 0},200);
 			}
 			
 		})

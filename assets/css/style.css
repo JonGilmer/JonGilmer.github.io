@@ -190,13 +190,14 @@ p {
 	position: relative;
 	z-index: 1;
 	overflow-x: hidden;
-}
+	margin-bottom: -2px;
+	}
 
 @media screen and (max-width: 767px) and (orientation: landscape) {
     #header.header-wrapper {
 		height: auto;
 		min-height: 100vh;
-		padding: 0px; 
+		padding: 0px;
 	} 
 }
 
@@ -323,6 +324,7 @@ p {
 
 .content-block{
 	background:transparent no-repeat center center fixed;
+	border: none;
 	-webkit-background-size:100%;
 	-moz-background-size:100%;
 	-o-background-size:100%;
@@ -335,6 +337,16 @@ p {
 	padding-top: 80px;
 	padding-bottom: 20px;
 }
+
+.content-block-vector{
+	background: url("../images/chevron_bg.svg") no-repeat;
+	border: none;
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+}
+
 .parallax{
 	padding: 80px 0;
 }
