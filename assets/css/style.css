@@ -250,7 +250,7 @@ p {
 	font-weight: bolder;
 	font-family: "League Spartan";
 	text-transform: capitalize;
-	color: white;
+	color: white;	
 }
 
 /* Secondary Slogan Text Styles */
@@ -259,6 +259,59 @@ p {
 	color: white;
 	line-height: 1.0em;
 	font-family: 'Alegreya SC';
+}
+
+/* Controls the fade in time of an element with the fade-in class */
+.fade-in {
+	animation: fadeIn ease 1.2s;
+	-webkit-animation: fadeIn ease 1.2s;
+	-moz-animation: fadeIn ease 1.2s;
+	-o-animation: fadeIn ease 1.2s;
+	-ms-animation: fadeIn ease 1.2s;
+  }
+  @keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-moz-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-webkit-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-o-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-ms-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+  }
 }
 
 #header .bottom {
@@ -341,10 +394,55 @@ p {
 .content-block-vector{
 	background: url("../images/chevron_bg.svg") no-repeat;
 	border: none;
+	background-position: top;
 	background-size: contain;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
+}
+
+.content-block-vector-up{
+	background: url("../images/chevron_up_bg.svg") no-repeat;
+	border: none;
+	background-position: top;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+.half-width-container {
+	width: 50%;
+}
+
+#about_me_id {
+	background-color: #272727;
+}
+
+.about_me {
+    width: 50%;
+	height: 430px;
+	position: relative;
+    display: table;
+    vertical-align: middle;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30%;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+	text-shadow: 2px 2px purple;
+}
+
+.circle {
+	border-radius: 300px;
+	filter: drop-shadow(0px 0px 20px purple);
 }
 
 .parallax{
@@ -413,6 +511,7 @@ p {
 	position: relative;
 	z-index: 1;
 }
+
 /* Portfolio images on hover styles settings */
 .recent-work:before {
     background: #09071da5;
