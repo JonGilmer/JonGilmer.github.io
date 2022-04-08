@@ -455,8 +455,7 @@ p {
 /* portfolio background styles */
 #portfolio
 {
-	background-color: #272727;
-	/* padding-bottom: 27%; */
+	color: white;
 }
 
 .col-sm-4 {
