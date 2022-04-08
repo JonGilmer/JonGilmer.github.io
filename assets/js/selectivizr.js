@@ -1,9 +1,3 @@
-/*
-selectivizr v1.0.2 - (c) Keith Clark, freely distributable under the terms 
-of the MIT license.
-
-selectivizr.com
-*/
 /* 
   
 Notes about this source
@@ -419,10 +413,7 @@ References:
 		return contextUrlPath + url;
 	};
 	
-	// --[ parseStyleSheet() ]----------------------------------------------
-	// Downloads the stylesheet specified by the URL, removes it's comments
-	// and recursivly replaces @import rules with their contents, ultimately
-	// returning the full cssText.
+
 	function parseStyleSheet( url ) {
 		if (url) {
 			return loadStyleSheet(url).replace(RE_COMMENT, EMPTY_STRING).
@@ -439,16 +430,9 @@ References:
 	
 	// --[ init() ]---------------------------------------------------------
 	function init() {
-		// honour the <base> tag
 		var url, stylesheet;
 		var baseTags = doc.getElementsByTagName("BASE");
 		var baseUrl = (baseTags.length > 0) ? baseTags[0].href : doc.location.href;
-		
-		/* Note: This code prevents IE from freezing / crashing when using 
-		@font-face .eot files but it modifies the <head> tag and could
-		trigger the IE stylesheet limit. It will also cause FOUC issues.
-		If you choose to use it, make sure you comment out the for loop 
-		directly below this comment.
 
 		var head = doc.getElementsByTagName("head")[0];
 		for (var c=doc.styleSheets.length-1; c>=0; c--) {
@@ -467,7 +451,7 @@ References:
 				}
 			}
 		}
-		*/
+
 		
 		for (var c = 0; c < doc.styleSheets.length; c++) {
 			stylesheet = doc.styleSheets[c]
@@ -479,8 +463,6 @@ References:
 			}
 		}
 		
-		// :enabled & :disabled polling script (since we can't hook 
-		// onpropertychange event when an element is disabled) 
 		if (enabledWatchers.length > 0) {
 			setInterval( function() {
 				for (var c = 0, cl = enabledWatchers.length; c < cl; c++) {
@@ -518,23 +500,6 @@ References:
 	});
 	
 	
-	/*!
-	 * ContentLoaded.js by Diego Perini, modified for IE<9 only (to save space)
-	 *
-	 * Author: Diego Perini (diego.perini at gmail.com)
-	 * Summary: cross-browser wrapper for DOMContentLoaded
-	 * Updated: 20101020
-	 * License: MIT
-	 * Version: 1.2
-	 *
-	 * URL:
-	 * http://javascript.nwbox.com/ContentLoaded/
-	 * http://javascript.nwbox.com/ContentLoaded/MIT-LICENSE
-	 *
-	 */
-
-	// @w window reference
-	// @f function reference
 	function ContentLoaded(win, fn) {
 
 		var done = false, top = true,

@@ -1,7 +1,5 @@
 (function($,sr){
 
-  // debouncing function from John Hann
-  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
   var debounce = function (func, threshold, execAsap) {
       var timeout;
 
@@ -38,35 +36,16 @@
 	$drawerRight = $('#drawer-right');
 	$logo = $('.logo');
 
-	///////////////////////////////
-	// Set Home Slideshow Height
-	///////////////////////////////
-
-	/*function setHomeBannerHeight() {
-		var windowHeight = jQuery(window).height();	
-		jQuery('#header').height(windowHeight);
-	}*/
-
-	///////////////////////////////
-	// Center Home Slideshow Text
-	///////////////////////////////
-
-	/*function centerHomeBannerText() {
-			var bannerText = jQuery('#header > .center');
-			var bannerTextTop = (jQuery('#header').actual('height')/2) - (jQuery('#header > .center').actual('height')/2) - 40;		
-			bannerText.css('padding-top', bannerTextTop+'px');		
-			bannerText.show();
-	}*/
-
 
 
 	///////////////////////////////
 	// SlideNav
 	///////////////////////////////
 
+
+
 	function setSlideNav(){
 		jQuery(".toggleDrawer").click(function(e){
-			//alert($wrapper.css('marginRight'));
 			e.preventDefault();
 
 			if($wrapper.css('marginLeft')=='0px'){
@@ -82,6 +61,8 @@
 			
 		})
 	}
+
+
 
 	function setHeaderBackground() {		
 		var scrollTop = jQuery(window).scrollTop(); // our current vertical position from the top	
@@ -101,31 +82,11 @@
 	///////////////////////////////
 
 
+	
 	setSlideNav();
-	/*jQuery.noConflict();
-	setHomeBannerHeight();
-	centerHomeBannerText();*/
 	setHeaderBackground();
 
-	//Resize events
-	/*jQuery(window).smartresize(function(){
-		setHomeBannerHeight();
-		centerHomeBannerText();
-		setHeaderBackground();
-	});*/
 
-
-	// Disabled for Interferance with Anchor functionality
-	//Set Down Arrow Button
-	// jQuery('#scrollToContent').click(function(e){
-	// 	e.preventDefault();
-	// 	jQuery.scrollTo("#portfolio", 1000, { offset:-(jQuery('#header .top').height()), axis:'y' });
-	// });
-
-	// jQuery('nav > ul > li > a').click(function(e){
-	// 	e.preventDefault();
-	// 	jQuery.scrollTo(jQuery(this).attr('href'), 400, { offset:-(jQuery('#header .top').height()), axis:'y' });
-	// })
 
 	jQuery(window).scroll( function() {
 	   setHeaderBackground();
